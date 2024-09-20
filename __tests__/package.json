@@ -1,0 +1,15 @@
+{
+  "name": "__tests__",
+  "version": "1.0.0",
+  "main": "pokemon.battle.tests.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
