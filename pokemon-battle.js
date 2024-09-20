@@ -21,7 +21,7 @@ class Pokemon {
     }
   }
   
-  class FirePokemon extends Pokemon {
+  class Fire extends Pokemon {
     constructor(name, hitPoints, attackDamage, move = 'ember') {
       super(name, hitPoints, attackDamage, move);
       this.type = 'fire';
@@ -36,7 +36,7 @@ class Pokemon {
     }
   }
   
-  class WaterPokemon extends Pokemon {
+  class Water extends Pokemon {
     constructor(name, hitPoints, attackDamage, move = 'water gun') {
       super(name, hitPoints, attackDamage, move);
       this.type = 'water';
@@ -51,7 +51,7 @@ class Pokemon {
     }
   }
   
-  class GrassPokemon extends Pokemon {
+  class Grass extends Pokemon {
     constructor(name, hitPoints, attackDamage, move = 'vine whip') {
       super(name, hitPoints, attackDamage, move);
       this.type = 'grass';
@@ -66,7 +66,7 @@ class Pokemon {
     }
   }
   
-  class NormalPokemon extends Pokemon {
+  class Normal extends Pokemon {
     constructor(name, hitPoints, attackDamage, move = 'tackle') {
       super(name, hitPoints, attackDamage, move);
       this.type = 'normal';
@@ -81,6 +81,30 @@ class Pokemon {
     }
   }
 
+  class Charmander extends Fire {
+    constructor() {
+      super('Charmander', 80, 40, 'ember'); // Fire Pokemon with move "ember"
+    }
+  }
+
+  class Squirtle extends Water {
+    constructor() {
+      super('Squirtle', 100, 30, 'water gun'); // Water Pokemon with move "water gun"
+    }
+  }
+
+  class Bulbasaur extends Grass {
+    constructor() {
+      super('Bulbasaur', 90, 35, 'vine whip'); // Grass Pokemon with move "vine whip"
+    }
+  }
+
+  class Rattata extends Normal {
+    constructor() {
+      super('Rattata', 70, 25, 'tackle'); // Normal Pokemon with default move "tackle"
+    }
+  }
+  
 class Trainer {
   constructor(name) {
     this.name = name;
@@ -186,7 +210,7 @@ class Pokeball {
     }
   }
   
-  module.exports = { Pokemon, FirePokemon, WaterPokemon, GrassPokemon, NormalPokemon, Trainer, Pokeball, Battle };
+  module.exports  = { Pokemon, Fire, Water, Grass, Normal, Charmander, Squirtle, Bulbasaur, Rattata, Trainer, Pokeball, Battle };
   
 
   
