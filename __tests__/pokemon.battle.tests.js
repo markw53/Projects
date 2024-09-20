@@ -1,6 +1,4 @@
-const Trainer = require('./Trainer');
-const { Charmander, Squirtle, Bulbasaur } = require('./Pokemon');
-const Battle = require('./Battle');
+const { Pokemon, FirePokemon, WaterPokemon, GrassPokemon, NormalPokemon, Trainer, Pokeball, Battle } = require('../pokemon-battle');
 
 describe('Pokemon Battle System', () => {
   let trainer1, trainer2, charmander, squirtle, bulbasaur, battle;

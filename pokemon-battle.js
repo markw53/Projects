@@ -2,13 +2,13 @@ class Pokemon {
     constructor(name, hitPoints, attackDamage, move = 'tackle') {
       this.name = name;
       this.hitPoints = hitPoints;
-      this.maxHitPoints = hitPoints; // To store the initial hit points
+      this.maxHitPoints = hitPoints; 
       this.attackDamage = attackDamage;
       this.move = move;
     }
   
     takeDamage(damage) {
-      this.hitPoints = Math.max(0, this.hitPoints - damage); // Prevent negative hitPoints
+      this.hitPoints = Math.max(0, this.hitPoints - damage); 
     }
   
     useMove() {
@@ -73,16 +73,13 @@ class Pokemon {
     }
   
     isEffectiveAgainst() {
-      return false; // Normal type is not strong against any type
+      return false; 
     }
   
     isWeakTo() {
-      return false; // Normal type is not weak to any type
+      return false; 
     }
   }
-  
-  module.exports = { Pokemon, FirePokemon, WaterPokemon, GrassPokemon, NormalPokemon };
-  const Pokeball = require('./Pokeball');
 
 class Trainer {
   constructor(name) {
@@ -110,7 +107,6 @@ class Trainer {
   }
 }
 
-module.exports = Trainer;
 class Pokeball {
     constructor() {
       this.pokemon = null;
@@ -144,7 +140,6 @@ class Pokeball {
     }
   }
   
-  module.exports = Pokeball;
   class Battle {
     calculateDamage(attacker, defender) {
       let damage = attacker.attackDamage;
@@ -191,7 +186,7 @@ class Pokeball {
     }
   }
   
-  module.exports = Battle;
+  module.exports = { Pokemon, FirePokemon, WaterPokemon, GrassPokemon, NormalPokemon, Trainer, Pokeball, Battle };
   
 
   
